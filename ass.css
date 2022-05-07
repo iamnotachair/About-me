@@ -1,0 +1,71 @@
+
+  .video-container{
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+  }
+
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+      /* height = 100 * (9 / 16) = 56.25 */
+      height: 56.25vw;
+    }
+  }
+      
+  @media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+      /* width = 100 / (9 / 16) = 177.777777 */
+      width: 177.78vh;
+    }
+  }
+
+
+
+  .video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+  
+    width: 400px;
+    height: 200px;
+  
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden;
+  
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+        /** Simulationg background-size: cover */
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      
+        position: absolute;
+        top: 0;
+        left: 0;
+      }

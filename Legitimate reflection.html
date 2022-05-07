@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>iamnotachair</title>
+<link rel="stylesheet" href="ass.css">
+<link rel="stylesheet" href="javabs.js">
+
+</head>
+
+
+<body style="overflow: hidden;">
+
+    
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/4ebas1ZvyVI?controls=0&autoplay=1&playlist=4ebas1ZvyVI&loop=1"></iframe>
+      </div>
+
+      <script type="text/javascript" src="javabs.js"></script>
+      
+
+<script>
+    function eventFire(el, etype){
+    if (el.fireEvent) {
+      el.fireEvent('on' + etype);
+    } else {
+      var evObj = document.createEvent('Events');
+      evObj.initEvent(etype, true, false);
+      el.dispatchEvent(evObj);
+    }
+  }
+
+  eventFire(document.getElementById('mytest1'), 'click');
+</script>
+</body>
+
+</html>
